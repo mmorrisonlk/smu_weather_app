@@ -87,7 +87,7 @@ var getCurrentWeather = function (cityName) {
             var dailyIconURL = 'https://www.openweathermap.org/img/wn/' + dailyIcon + '.png';
             
             var forecastContainer = document.querySelector(".forecast-container");
-            var element = document.createElement("div");
+            var element = document.createElement("div", class{"col-2"});
             element.innerHTML = '<h4>' + '<p>' + daily + '</p>' + '</h4>' + '<img src="' + dailyIconURL + '"alt="Weather Icons">' + '</p>' + '<p>' + "Temp: " + Math.round(data.daily[index].temp.max) + " ℉" + '</p>' + '<p>' + "Humid: " + data.daily[index].humidity + "%" + '</p>' + '</h6>'
             forecastContainer.appendChild(element)
                   }
